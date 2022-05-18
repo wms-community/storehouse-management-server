@@ -12,7 +12,7 @@
 
 优雅的开源库房管理系统，现在，回应您的等待。
 
-Warehouse Management is a web application where you can manage your warehouse and customize your wechat official account! Different from the warehouse management system, it supports wechat official account and other available APIs, and supports functions such as selling warehouses.
+仓库管理是一个web应用程序，您可以在其中管理仓库并自定义微信公众号！与传统的仓库管理系统不同，它支持微信公众号等API，并支持销售仓库等功能。
 
 Storehouse Management is an open-source project written in PHP, which means you can deploy it freely on your own web server!
 
