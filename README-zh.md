@@ -12,19 +12,19 @@
 
 优雅的开源库房管理系统，现在，回应您的等待。
 
-仓库管理是一个web应用程序，您可以在其中管理仓库并自定义微信公众号！与传统的仓库管理系统不同，它支持微信公众号等API，并支持销售仓库等功能。
+Cinnamoroll库房管理系统是一个web应用程序，您可以在其中管理您的库房并自定义微信公众号！与传统的仓库管理系统不同，它支持微信公众号等API，并支持销售仓库、产品销售等功能。
 
-Storehouse Management is an open-source project written in PHP, which means you can deploy it freely on your own web server!
+Cinnamoroll库房管理系统是一个用PHP编写的开源项目，这意味着您可以在自己的web服务器上自由部署它！
 
-## Features
+## 特性
 
-Comming soon.
+Comming soon...
 
-## Requirements
+## 环境要求
 
-Storehouse Management has only a few system requirements. In most cases, these PHP extensions are already enabled.
+Cinnamoroll库房管理系统对您的服务器有一定的要求。在大多数情况下，下列所需的 PHP 扩展已经开启。
 
-- Web server with URL rewriting enabled (Nginx or Apache)
+- 一台支持 URL 重写的主机，Nginx 或 Apache
 - PHP >= 7.2.5
 - PHP Extensions
   - OpenSSL
@@ -32,18 +32,17 @@ Storehouse Management has only a few system requirements. In most cases, these P
   - GD
   - XML
   - JSON
-  - fileinfo
   - zip
 
-## Quick Install
+## 快速使用
 
-Please read [Installation Guide](https://wms.mojy.xyz/en-us/install.html).
+请参阅 [安装指南](https://wms.mojy.xyz/zh-cn/install.html).
 
-## Plugin System
+## 插件系统
 
-Storehouse Management provides an elegant and powerful plugin system, and you can attach plenty of functions and customization to your site via installing plugins.
+Cinnamoroll库房管理系统提供了强大的插件系统，您可以通过添加多种多样的插件来为您的系统添加功能。
 
-## Supporting Blessing Skin
+## 支持并赞助 Storehouse Management
 
 Welcome to sponsoring Storehouse Management if this software is useful for you!
 
