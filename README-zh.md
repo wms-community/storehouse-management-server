@@ -10,7 +10,7 @@
 <a href="https://github.com/wms-community/storehouse-management-server/blob/master/LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/wms-community/storehouse-management-server?style=flat-square"></a>
 </p>
 
-Do you often feel sleepy about your warehouse management? Cinnamoroll Warehouse Management Server solves this problem for you.
+优雅的开源库房管理系统，现在，回应您的等待。
 
 Warehouse Management is a web application where you can manage your warehouse and customize your wechat official account! Different from the warehouse management system, it supports wechat official account and other available APIs, and supports functions such as selling warehouses.
 
