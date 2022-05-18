@@ -18,7 +18,7 @@ Storehouse Management is an open-source project written in PHP, which means you 
 
 ## Features
 
-Comming soon.
+Comming soon...
 
 ## Requirements
 
@@ -32,7 +32,6 @@ Storehouse Management has only a few system requirements. In most cases, these P
   - GD
   - XML
   - JSON
-  - fileinfo
   - zip
 
 ## Quick Install
