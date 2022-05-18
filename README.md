@@ -43,7 +43,7 @@ Please read [Installation Guide](https://wms.mojy.xyz/en-us/install.html).
 
 Storehouse Management provides an elegant and powerful plugin system, and you can attach plenty of functions and customization to your site via installing plugins.
 
-## Supporting Blessing Skin
+## Supporting Warehouse Management
 
 Welcome to sponsoring Storehouse Management if this software is useful for you!
 
