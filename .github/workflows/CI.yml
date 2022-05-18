@@ -13,29 +13,101 @@ on:
     paths-ignore:
       - 'app/lang/**'
       - '**.md'
-      
+
 jobs:
-  runs-on: ubuntu-lastest
-  strategy:
-    matrix:
-      php: [7.3]
-    fail-fast: false
-  services:
-    redis:
-      image: redis
-      posts:
-        - 6379:6379
+  php-lint:
+    name: PHP Linting
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Set up PHP ${{matrix.php}}
-      - uses: actions/setup-php@v2
-    with:
-      php-version: ${{matrix.php}}
-  - name: Run test
-    run: mvn test
-  - name: Build with Maven
-    run: mvn package -Dmaven.test.skip=true
-  - name: Upload coverage to Codecov
-    uses: codecov/codecov-action@v1
-    with:
-      token: ${{secrets.CODECOV_TOKEN}}
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: 7.3
+        coverage: none
+        extensions: mbstring, dom, fileinfo, gd
+    - name: Install dependencies
+      run: |
+        composer install --prefer-dist --no-progress
+    - name: Prepare
+      run: |
+        cp .env.example .env
+        php artisan key:generate
+        mkdir -p resources/views/overrides
+    - name: Validate Twig templates
+      run: php artisan twig:lint -v
+    - name: Check coding style
+      run: ./vendor/bin/php-cs-fixer fix --dry-run --stop-on-violation --diff --format=txt
+  php:
+    name: PHP ${{ matrix.php }} Tests
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php: ['7.3', '7.4', '8.0', '8.1']
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Setup PHP only
+      uses: shivammathur/setup-php@v2
+      if: matrix.php != '7.3'
+      with:
+        php-version: ${{ matrix.php }}
+        coverage: none
+        extensions: mbstring, dom, sqlite, gd, zip
+    - name: Setup PHP with Xdebug
+      uses: shivammathur/setup-php@v2
+      if: matrix.php == '7.3'
+      with:
+        php-version: ${{ matrix.php }}
+        coverage: xdebug
+        extensions: mbstring, dom, sqlite, gd, zip
+    - name: Cache Composer dependencies
+      uses: actions/cache@v1
+      with:
+        path: vendor
+        key: ${{ runner.os }}-composer-${{ hashFiles('composer.lock') }}
+        restore-keys: ${{ runner.os }}-composer-
+    - name: Install Composer dependencies
+      run: composer install --no-progress --prefer-dist --optimize-autoloader
+    - name: Run tests only
+      if: matrix.php != '7.3'
+      run: ./vendor/bin/phpunit
+    - name: Run tests with coverage report
+      if: matrix.php == '7.3'
+      run: ./vendor/bin/phpunit --coverage-clover=coverage.xml
+    - name: Upload coverage report
+      uses: codecov/codecov-action@v1
+      if: matrix.php == '7.3' && success()
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        name: github-actions
+  lint:
+    name: Frontend Linting
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Install dependencies
+      run: yarn
+    - name: Run checks
+      run: |
+        yarn lint
+        yarn fmt:check
+        yarn type:check
+  jest:
+    name: Frontend Tests
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Install dependencies
+      run: yarn
+    - name: Run tests
+      run: yarn test --coverage
+    - name: Upload coverage report
+      uses: codecov/codecov-action@v1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        name: github-actions
