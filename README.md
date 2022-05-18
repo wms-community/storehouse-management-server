@@ -4,11 +4,10 @@
 <p align="center"><img src="https://user-images.githubusercontent.com/101342651/168995296-12e6367f-a93b-4ef1-ad4a-8cbc06905bfb.jpeg"></p>
 
 <p align="center">
-<a href="https://github.com/bs-community/blessing-skin-server/actions"><img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/bs-community/blessing-skin-server/CI?style=flat-square"></a>
-<a href="https://codecov.io/gh/bs-community/blessing-skin-server"><img alt="Codecov" src="https://img.shields.io/codecov/c/github/bs-community/blessing-skin-server?style=flat-square"></a>
-<a href="https://github.com/bs-community/blessing-skin-server/releases"><img alt="GitHub release (latest SemVer including pre-releases)" src="https://img.shields.io/github/v/release/bs-community/blessing-skin-server?include_prereleases&style=flat-square"></a>
-<a href="https://github.com/bs-community/blessing-skin-server/blob/master/LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/bs-community/blessing-skin-server?style=flat-square"></a>
-<a href="https://discord.com/invite/QAsyEyt"><img alt="Discord" src="https://discord.com/api/guilds/761226550921658380/widget.png"></a>
+<a href="https://github.com/wms-community/storehouse-management-server/actions"><img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/wms-community/storehouse-management-server/CI?style=flat-square"></a>
+<a href="https://codecov.io/gh/wms-community/storehouse-management-server"><img alt="Codecov" src="https://img.shields.io/codecov/c/github/wms-community/storehouse-management-server?style=flat-square"></a>
+<a href="https://github.com/bs-community/blessing-skin-server/releases"><img alt="GitHub release (latest SemVer including pre-releases)" src="https://img.shields.io/github/v/release/wms-community/storehouse-management-server?include_prereleases&style=flat-square"></a>
+<a href="https://github.com/wms-community/storehouse-management-server/blob/master/LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/wms-community/storehouse-management-server?style=flat-square"></a>
 </p>
 
 Do you often feel sleepy about your warehouse management? Cinnamoroll Warehouse Management Server solves this problem for you.
