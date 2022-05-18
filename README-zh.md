@@ -90,14 +90,12 @@ Cinnamoroll库房管理系统可支持多种语言，当前支持英语和简体
 
 ## 问题报告
 
-请参阅 [报告问题的正确姿势](https://wms.mojy.xyz/en-us/faq.html) and double check if your situation doesn't suit any case mentioned there before reporting.
+请参阅 [报告问题的正确姿势](https://wms.mojy.xyz/zh-cn/faq.html) 。
 
-When reporting a problem, please attach your log file (located at `runtime/log`) and the information of your server where the error occured on. You should also read this [guide](https://wms.mojy.xyz/en-us/report.html) before reporting a problem.
+## 相关链接
 
-## Related Links
-
-- [User Manual](https://wms.mojy.xyz/en-us/)
-- [Plugins Development Documentation](https://wms-plugin.mojy.xyz)
+- [用户手册](https://wms.mojy.xyz/zh-cn/)
+- [插件开发文档](https://wms-plugin.mojy.xyz/zh-cn/)
 
 ## Copyright & License
 
