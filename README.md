@@ -11,9 +11,9 @@
 <a href="https://discord.com/invite/QAsyEyt"><img alt="Discord" src="https://discord.com/api/guilds/761226550921658380/widget.png"></a>
 </p>
 
-Puzzled by losing your custom skins in Minecraft servers runing in offline mode? Now you can easily get them back with the help of Blessing Skin!
+Do you often feel sleepy about your warehouse management? Cinnamoroll Warehouse Management Server solves this problem for you.
 
-Storehouse Management is a web application where you can upload, manage and share your custom skins & capes! Unlike modifying a resource pack, everyone in the game will see the different skins of each other (of course they should register at the same website too).
+Warehouse Management is a web application where you can manage your warehouse and customize your wechat official account! Different from the warehouse management system, it supports wechat official account and other available APIs, and supports functions such as selling warehouses.
 
 Storehouse Management is an open-source project written in PHP, which means you can deploy it freely on your own web server!
 
