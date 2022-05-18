@@ -44,9 +44,9 @@ Cinnamoroll库房管理系统提供了强大的插件系统，您可以通过添
 
 ## 支持并赞助 Storehouse Management
 
-Welcome to sponsoring Storehouse Management if this software is useful for you!
+如果您觉得这个软件对您很有帮助，欢迎通过赞助来支持开发！
 
-Currently you can sponsor us via [爱发电](https://afdian.net/@Cinnamoroll).
+目前可在 [爱发电](https://afdian.net/@Cinnamoroll) 上赞助。
 
 ### Sponsors
 
@@ -80,17 +80,17 @@ Currently you can sponsor us via [爱发电](https://afdian.net/@Cinnamoroll).
     </tbody>
 </table>
 
-## Build From Source
+## 自行构建
 
-Please refer to [Manual Build](https://wms.mojy.xyz/en-us/build.html).
+详情可阅读 [这里](https://wms.mojy.xyz/zh-cn/build.html) 。
 
-## Internationalization
+## 国际化（i18n）
 
-Storehouse Management supports multiple languages, while currently supporting English and Simplified Chinese.
+Cinnamoroll库房管理系统可支持多种语言，当前支持英语和简体中文。
 
-## Report Bugs
+## 问题报告
 
-Read [FAQ](https://wms.mojy.xyz/en-us/faq.html) and double check if your situation doesn't suit any case mentioned there before reporting.
+请参阅 [报告问题的正确姿势](https://wms.mojy.xyz/en-us/faq.html) and double check if your situation doesn't suit any case mentioned there before reporting.
 
 When reporting a problem, please attach your log file (located at `runtime/log`) and the information of your server where the error occured on. You should also read this [guide](https://wms.mojy.xyz/en-us/report.html) before reporting a problem.
 
