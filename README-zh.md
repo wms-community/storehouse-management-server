@@ -90,7 +90,7 @@ Cinnamoroll库房管理系统可支持多种语言，当前支持英语和简体
 
 ## 问题报告
 
-请参阅 [报告问题的正确姿势](https://wms.mojy.xyz/zh-cn/faq.html) 。
+请参阅 [报告问题的正确姿势](https://wms.mojy.xyz/zh-cn/report.html) 。
 
 ## 相关链接
 
