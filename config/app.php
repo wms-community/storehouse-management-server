@@ -117,7 +117,23 @@ return [
     */
     'exception_tmpl'   => app()->getThinkPath() . 'tpl/think_exception.tpl',
     
+    /*
+    |--------------------------------------------------------------------------
+    | Error display message
+    |--------------------------------------------------------------------------
+    |
+    | Non debug mode is valid.
+    |
+    */
     'error_message'    => 'System Error',
     
+    /*
+    |--------------------------------------------------------------------------
+    | Display error message
+    |--------------------------------------------------------------------------
+    |
+    | Display error message.
+    |
+    */
     'show_error_msg'   => false,
 ];
