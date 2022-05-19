@@ -7,11 +7,11 @@
     "content-hash": "0b23ce7f798d88bfc4a4576534bd9000",
     "packages": [
         {
-            "name": "league/flysystem",
-            "version": "1.1.9",
+            "name": "wms-community/storehouse-management-server",
+            "version": "0.0.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/thephpleague/flysystem.git",
+                "url": "https://github.com/wms-community/storehouse-management-server.git",
                 "reference": "094defdb4a7001845300334e7c1ee2335925ef99"
             },
             "dist": {
