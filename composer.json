@@ -1,40 +1,36 @@
 {
-  "name": "wms-community/storehouse-management-server",
-  "description": "A PHP system for efficient management of your warehouse.",
-  "license": "Apache-2.0",
-  "require": {
-    "php": ">=7.2.5",
-    "ext-ctype": "*",
-    "ext-gd": "*",
-    "ext-json": "*",
-    "ext-mbstring": "*",
-    "ext-openssl": "*",
-    "ext-pdo": "*",
-    "ext-tokenizer": "*",
-    "ext-xml": "*",
-    "ext-zip": "*",
-    "composer/ca-bundle": "^1.2",
-    "composer/semver": "^3.2",
-    "topthink/framework": "^6.0.0",
-    "topthink/think-orm": "^2.0",
-    "topthink/think-view": "^1.0"
-  },
-  "require-dev": {
-    "symfony/var-dumper": "^4.2",
-    "topthink/think-trace":"^1.0"
-  },
-  "autoload": {
-    "psr-4": {
-       "app\\": "app"
-      },
-     "psr-0": {
-       "": "extend/"
-      }
-  },
-  "config": {
+    "name": "wms-community/storehouse-management-server", 
+    "description": "A PHP system for efficient management of your warehouse.",
+    "type": "project",
+    "license": "Apache-2.0",
+    "require": {
+        "php": ">=7.2.5",
+        "topthink/framework": "^6.0.0",
+        "topthink/think-orm": "^2.0",
+        "topthink/think-view": "^1.0"
+        "ext-gd": "*",
+        "ext-json": "*",
+        "ext-pdo": "*",
+        "ext-xml": "*",
+        "ext-zip": "*",
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^4.2",
+        "topthink/think-trace":"^1.0"
+        "phpunit/phpunit": "^9.4",
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\": "app"
+        },
+        "psr-0": {
+            "": "extend/"
+        }
+    },
+    "config": {
         "preferred-install": "dist"
     },
-  "scripts": {
+    "scripts": {
         "post-autoload-dump": [
             "@php think service:discover",
             "@php think vendor:publish"
