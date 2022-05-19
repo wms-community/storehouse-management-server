@@ -5,7 +5,7 @@ return [
     | Application Version
     |--------------------------------------------------------------------------
     |
-    | Version of Blessing Skin Server.
+    | Version of Storehouse Management Server.
     |
     */
     'version' => '0.0.1-alpha-202205190805',
