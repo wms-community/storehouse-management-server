@@ -36,6 +36,7 @@ return [
     'app_host'         => env('app.host', ''),
     
     'app_namespace'    => '',
+    
     'with_route'       => true,
     'default_app'      => 'index',
     'default_timezone' => 'Asia/Shanghai',
