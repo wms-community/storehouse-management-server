@@ -45,7 +45,24 @@ return [
     */
     'app_namespace'    => '',
     
+    /*
+    |--------------------------------------------------------------------------
+    | With route
+    |--------------------------------------------------------------------------
+    |
+    | Route in the Application.
+    |
+    */
     'with_route'       => true,
+    
+    /*
+    |--------------------------------------------------------------------------
+    | Default Application
+    |--------------------------------------------------------------------------
+    |
+    | The default Application.
+    |
+    */
     'default_app'      => 'index',
     
     /*
@@ -59,10 +76,48 @@ return [
     |
     */
     'default_timezone' => 'Asia/Shanghai',
+    
+    /*
+    |--------------------------------------------------------------------------
+    | Application Map
+    |--------------------------------------------------------------------------
+    |
+    | Automatic multi application mode is effective.
+    |
+    */
     'app_map'          => [],
+    
+    /*
+    |--------------------------------------------------------------------------
+    | Bind domain
+    |--------------------------------------------------------------------------
+    |
+    | Automatic multi application mode is effective.
+    |
+    */
     'domain_bind'      => [],
+    
+    /*
+    |--------------------------------------------------------------------------
+    | List of apps with URL access disabled
+    |--------------------------------------------------------------------------
+    |
+    | Automatic multi application mode is effective.
+    |
+    */
     'deny_app_list'    => [],
+    
+    /*
+    |--------------------------------------------------------------------------
+    | Template file for exception page
+    |--------------------------------------------------------------------------
+    |
+    | It will display an error message when there is a problem with the system.
+    |
+    */
     'exception_tmpl'   => app()->getThinkPath() . 'tpl/think_exception.tpl',
+    
     'error_message'    => 'System Error',
+    
     'show_error_msg'   => false,
 ];
