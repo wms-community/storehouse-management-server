@@ -25,7 +25,7 @@ return [
     
     /*
     |--------------------------------------------------------------------------
-    | Application URL
+    | Application Host
     |--------------------------------------------------------------------------
     |
     | This URL is used by the console to properly generate URLs when using
