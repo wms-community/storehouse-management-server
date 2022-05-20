@@ -23,6 +23,8 @@ return [
         'https://comming.soon/update.json'
     ),
     
+    'name' => env('APP_NAME', 'blessing_skin'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Host
