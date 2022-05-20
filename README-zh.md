@@ -25,7 +25,7 @@ Comming soon...
 Cinnamoroll库房管理系统对您的服务器有一定的要求。在大多数情况下，下列所需的 PHP 扩展已经开启。
 
 - 一台支持 URL 重写的主机，Nginx 或 Apache
-- PHP >= 7.2.5
+- PHP >= 7.3
 - PHP Extensions
   - OpenSSL
   - PDO
