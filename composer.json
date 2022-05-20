@@ -5,6 +5,15 @@
     "license": "Apache-2.0",
     "require": {
         "php": ">=7.2.5",
+        "ext-ctype": "*",
+        "ext-gd": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "ext-openssl": "*",
+        "ext-pdo": "*",
+        "ext-tokenizer": "*",
+        "ext-xml": "*",
+        "ext-zip": "*",
         "topthink/framework": "^6.0.0",
         "topthink/think-orm": "^2.0",
         "topthink/think-view": "^1.0"
@@ -17,9 +26,21 @@
     "autoload": {
         "psr-4": {
             "app\\": "app"
-        },
-        "psr-0": {
-            "": "extend/"
         }
     },
-}
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "repositories": {
+    "packagist": {
+      "type": "composer",
+      "url": "https://packagist.org/"
+    }
+  }
+},
