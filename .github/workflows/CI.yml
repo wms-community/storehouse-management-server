@@ -36,7 +36,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        php: ['7.2', '7.3', '7.4', '8.0', '8.1']
+        php: ['7.2.5', '7.3', '7.4', '8.0', '8.1']
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
@@ -65,9 +65,6 @@ jobs:
     - name: Run tests only
       if: matrix.php != '7.3'
       run: ./vendor/bin/phpunit
-    - name: Run tests with coverage report
-      if: matrix.php == '7.3'
-      run: ./vendor/bin/phpunit --coverage-clover=coverage.xml
     - name: Upload coverage report
       uses: codecov/codecov-action@v1
       if: matrix.php == '7.3' && success()
