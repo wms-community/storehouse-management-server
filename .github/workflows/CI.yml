@@ -80,18 +80,12 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-    - name: Install dependencies
-      run: yarn
   jest:
     name: Frontend Tests
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-    - name: Install dependencies
-      run: yarn
-    - name: Run tests
-      run: yarn test --coverage
     - name: Upload coverage report
       uses: codecov/codecov-action@v1
       with:
