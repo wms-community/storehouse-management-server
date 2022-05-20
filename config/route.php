@@ -13,7 +13,7 @@ return [
     // Enable route delay resolution
     'url_lazy_route'        => true,
     // Force routing
-    'url_route_must'        => true,
+    'url_route_must'        => false,
     // Merge routing rules
     'route_rule_merge'      => false,
     // Is the route exactly matched
