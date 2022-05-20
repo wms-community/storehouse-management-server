@@ -23,8 +23,6 @@ return [
         'https://comming.soon/update.json'
     ),
     
-    'name' => env('APP_NAME', 'storehouse_management'),
-    
     /*
     |--------------------------------------------------------------------------
     | Application Host
