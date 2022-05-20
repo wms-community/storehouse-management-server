@@ -1,0 +1,52 @@
+        <!-- 第三步 -->
+        <div class="show_box"  id="three">
+            <div class="nav_top cerfix">
+                <h4>{$Think.lang.install.title}<span class="edition"></span></h4>
+            </div>
+            <ul class="buzou">
+                <li><b>1</b>{$Think.lang.install.buzhou_1}</li>
+                <li><i></i></li>
+                <li><b class="active">2</b>{$Think.lang.install.buzhou_2}</li>
+                <li><i></i></li>
+                <li><b>3</b>{$Think.lang.install.buzhou_3}</li>
+            </ul>
+            <div class="input_content">
+                <div class="input_title">
+                    <span><img src="/public/install/images/infoicon.png" style="margin-right: 8px;" alt="">{$Think.lang.install.db_info}</span>
+                </div>
+                <div class="text_row">
+                    <div>{$Think.lang.install.db_server}: </div>
+                    <input type="text" value="{$sqlHost}" class="databaseFiv">
+                </div>
+                <div class="text_row">
+                    <div>{$Think.lang.install.db_port}: </div>
+                    <input type="text" value="{$sqlPort}" class="databaseFiv">
+                </div>
+                <div class="text_row">
+                    <div>{$Think.lang.install.db_name}: </div>
+                    <input type="text" value="{$sqlName}" class="databaseFiv">
+                </div>
+                <div class="text_row">
+                    <div>{$Think.lang.install.db_username}: </div>
+                    <input type="text" value="{$sqlUser}" class="databaseFiv">
+                </div>
+                <div class="text_row">
+                    <div>{$Think.lang.install.db_password}: </div>
+                    <input type="text" value="{$sqlPass}" class="databaseFiv">
+                </div>
+                <div class="text_row" style="">
+                    <div>{$Think.lang.install.db_prefix}: </div>
+                    <input type="text" value="{$sqlPrefix}" class="databaseFiv">
+                </div>
+                <div class="text_row" style="padding-right: 0;">
+                    <div class="errts cerfix" id="rqstbc">
+                        <img style="margin-right: 8px;" src="/public/install/images/err.png">
+                        <span id="daFail">{$Think.lang.install.db_error}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="btnbox">
+                <button  style="color: #3699FF;" class="lastStep">{$Think.lang.install.laststep}</button>
+                <button style="color: white;background-color:#3699FF;" class="nextStep">{$Think.lang.install.nextstep}</button>
+            </div>
+        </div>
