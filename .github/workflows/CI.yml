@@ -24,7 +24,7 @@ jobs:
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: 7.2.5
+        php-version: 7.3
         coverage: none
         extensions: mbstring, dom, fileinfo, gd
     - name: Install dependencies
@@ -36,20 +36,20 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        php: ['7.2.5', '7.3', '7.4', '8.0', '8.1']
+        php: ['7.3', '7.4', '8.0', '8.1']
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
     - name: Setup PHP only
       uses: shivammathur/setup-php@v2
-      if: matrix.php != '7.2.5'
+      if: matrix.php != '7.3'
       with:
         php-version: ${{ matrix.php }}
         coverage: none
         extensions: mbstring, dom, sqlite, gd, zip
     - name: Setup PHP with Xdebug
       uses: shivammathur/setup-php@v2
-      if: matrix.php == '7.2.5'
+      if: matrix.php == '7.3'
       with:
         php-version: ${{ matrix.php }}
         coverage: xdebug
@@ -64,7 +64,7 @@ jobs:
       run: composer install
     - name: Upload coverage report
       uses: codecov/codecov-action@v1
-      if: matrix.php == '7.2.5' && success()
+      if: matrix.php == '7.3' && success()
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
         name: github-actions
