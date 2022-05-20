@@ -53,7 +53,7 @@ CREATE TABLE `__PREFIX__config` (
 --
 
 INSERT INTO `__PREFIX__config` (`id`, `sitename`, `siteurl`, `sitetail`, `sitedes`, `sitekey`, `beian`, `support`, `repo`) VALUES
-(1, '玉桂库房管理系统', '', '好用的库房管理系统', '库房管理，库房管理系统，简单易用、功能强大的控制面板。管理您的库房，我们是专业的!', '库房管理,库房管理系统,玉桂库房管理系统', '', 'support@mojy.xyz', 'https://github.com/Cinnamoroll-Home/Storehouse-Management-Server');
+(1, '玉桂库房管理系统', '', '好用的库房管理系统', '库房管理，库房管理系统，简单易用、功能强大的控制面板。管理您的库房，我们是专业的!', '库房管理,库房管理系统,玉桂库房管理系统', '', 'support@mojy.xyz', 'https://github.com/wms-community/storehouse-management-server');
 
 -- --------------------------------------------------------
 
