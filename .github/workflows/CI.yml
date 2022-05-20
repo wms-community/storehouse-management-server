@@ -80,12 +80,9 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-    - name: Install dependencies
-      run: yarn
-    - name: Run tests
-      run: yarn test --coverage
     - name: Upload coverage report
       uses: codecov/codecov-action@v1
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
+        file: /codecov.xml
         name: github-actions
