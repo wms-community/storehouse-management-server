@@ -8,12 +8,6 @@
     <artifactId>storehouse-management-server</artifactId>
     <packaging>pom</packaging>
     <version>0.0.1</version>
-    <modules>
-        <module>app</module>
-        <module>config</module>
-        <module>public</module>
-        <module>route</module>
-    </modules>
 
     <licenses>
         <license>
