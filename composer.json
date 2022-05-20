@@ -8,10 +8,6 @@
         "topthink/framework": "^6.0.0",
         "topthink/think-orm": "^2.0",
         "topthink/think-view": "^1.0"
-        "ext-json": "*",
-        "ext-pdo": "*",
-        "ext-xml": "*",
-        "ext-zip": "*",
     },
     "require-dev": {
         "symfony/var-dumper": "^4.2",
