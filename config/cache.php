@@ -12,15 +12,15 @@ return [
     'stores'  => [
         'file' => [
             // Driving mode
-            'type'       => 'File',
+            'type'       => env('cache.mode', 'File'),
             // Cache save directory
-            'path'       => '',
+            'path'       => env('cache.path', ''),
             // Cache prefix
-            'prefix'     => '',
+            'prefix'     => env('cache.prefix', ''),
             // Cache validity period 0 indicates permanent cache
-            'expire'     => 0,
+            'expire'     => env('cache.expire', 0),
             // Cache label prefix
-            'tag_prefix' => 'tag:',
+            'tag_prefix' => env('cache.tag', 'tag:'),
             // Serialization mechanism, such as ['serialize ',' unserialize ']
             'serialize'  => [],
         ],
