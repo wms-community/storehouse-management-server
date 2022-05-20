@@ -11,6 +11,7 @@ use think\facade\Session;
 use think\facade\View;
 use think\facade\Env;
 use think\facade\Lang;
+use think\facade\Config;
 
 class Install
 {
@@ -209,7 +210,7 @@ class Install
     public function version()
     {
         header('Content-Type:application/json;charset=utf-8');
-        $data = array('version' => '0.0.1-alpha-202204220120');
+        $data = array('version' => Config::get('app.version'));
         $result = array('status' => 200, 'data' => $data);
         exit (json_encode($result));
     }
