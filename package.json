@@ -10,10 +10,7 @@
   "license": "Apache-2.0",
   "private": true,
   "scripts": {
-    "dev": "webpack serve",
-    "build": "webpack --env production --progress",
-    "test": "jest",
-    "prepare": "husky install"
+   "report-coverage": "codecov"
   },
   "browserslist": [
     "> 1%",
@@ -28,13 +25,4 @@
     "trailingComma": "all",
     "tabWidth": 2
   },
-  "jest": {
-    "preset": "ts-jest",
-    "resetMocks": true,
-    "testEnvironment": "jsdom",
-    "moduleFileExtensions": [
-      "js",
-      "json"
-    ],
-  }
 }
