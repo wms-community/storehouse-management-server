@@ -92,7 +92,7 @@ class Install
         if (is_array($value))
             $value = array_change_key_case($value, CASE_UPPER);
         if (isset($env[$name]) && is_array($env[$name]) && is_array($value)) {
-            $value = array_merge($env[$name], $value);//合并
+            $value = array_merge($env[$name], $value); // merge
         }
         if (!is_array($value) && !is_string($value)) {
             if (is_bool($value)) {
@@ -138,7 +138,7 @@ class Install
     private static function connectMysql()
     {
         if (empty(self::$db)) {
-            //获取参数
+            // Get parameters
             $hostname = input('hostname', '', 'htmlspecialchars');
             $hostport = input('hostport', '', 'htmlspecialchars');
             $username = input('username', '', 'htmlspecialchars');
@@ -168,7 +168,7 @@ class Install
         return self::$db;
     }
     /**
-     * tp内置函数输出json，api接口
+     * TP built-in function output JSON, API interface
      * @param int $status
      * @param string $msg
      * @param array $data
@@ -186,13 +186,13 @@ class Install
         throw new HttpResponseException($response);
     }
     /**
-     * 发送前端页面，赋值初始值
-     * 显示协议等
+     * Send the front page and assign the initial value
+     * Display protocol, etc
      * @return string|\think\response\Redirect
      */
     public function index()
     {
-        if (self::isLock()) { //判断是否锁定
+        if (self::isLock()) { // Determine whether it is locked
             return redirect('/');
         } else {
             return View::fetch('install/index', [
@@ -205,7 +205,7 @@ class Install
             ]);
         }
     }
-    //版本号
+    // Version number
     public function version()
     {
         header('Content-Type:application/json;charset=utf-8');
@@ -214,8 +214,8 @@ class Install
         exit (json_encode($result));
     }
     /**
-     * 环境验证，暂未开发
-     * 第一步
+     * Environmental verification, not yet developed
+     * Step 1
      */
     public function envmonitor()
     {
@@ -225,8 +225,8 @@ class Install
         exit (json_encode($result));
     }
     /**
-     * 数据库配置
-     * 第二步
+     * Database configuration
+     * Step 2
      */
     public function dbmonitor()
     {
@@ -241,12 +241,12 @@ class Install
         if (false !== $check) {
             $this->endJson(500, 'The database table already exists. Please delete the existing library table before installing');
         }
-        //返回信息
+        // Return information
         $this->endJson(200, 'database available');
 
     }
     /**
-     * 资料验证并缓存
+     * Data validation and caching
      */
     function codemonitor(){
         $sitename      = input('sitename', '', 'htmlspecialchars');
@@ -279,13 +279,13 @@ class Install
         $this->endJson(200, 'Success');
     }
     /**
-     * 建立数据库，并配置站点、管理员等重要信息
-     * 第三步
+     * Establish database and configure important information such as site and administrator
+     * Step 3
      */
     function installing()
     {
-        $line = input('line/d',0);//上次读取到那一行
-        //文件校验
+        $line = input('line/d',0);// Which line was last read
+        // File verification
         $sqlPath = self::$sqlFile;
         if (!file_exists($sqlPath)){
             $this->endJson(500, 'Database file does not exist, in Path : ' . $sqlPath);
@@ -295,7 +295,8 @@ class Install
         $tmpSql = '';
         while (false === feof($op)){
             $t = fgets($op);
-            if ($i === $line && strpos($t,';')){//找到执行行
+            if ($i === $line && strpos($t,';')){
+                // Execution line found
                 $t_arr = explode(';',$t);
                 unset($t_arr[0]);
                 $tmpSql .= implode(';',$t_arr);
@@ -315,33 +316,33 @@ class Install
         $msg = '';
         $run =  false;
         if (!empty($tmpSql)){
-            //获取前缀
+            // Get prefix
             $prefix = Env::get('database.prefix',self::$defaultConfig['prefix']);
             $tmpSql = str_replace('__PREFIX__',$prefix,$tmpSql);
-            //执行Sql
+            // Execute SQL
             try{
                 $run = false !== Db::execute($tmpSql);
             }catch (\Exception $e){
             }
-            //匹配sql
+            // Matching SQL
             if (strpos(strtolower($tmpSql),'insert')){
-                //插入
+                // Insert
                 $msg = 'insert';
             }elseif (strpos(strtolower($tmpSql),'create')){
-                //创建
+                // Establish
                 $msg = 'create';
             }elseif (strpos(strtolower($tmpSql),'alter')){
-                //索引
+                // Indexes
                 $msg = 'alter';
             }elseif (strpos(strtolower($tmpSql),'dr')){
-                //删除
+                // Delete
                 $msg = 'delete';
             }
             $name = explode('`',$tmpSql);
             if (isset($name[1]))
                 $msg .= ' table [' . $name[1] . '] ' . ($run?'success':'Failed');
         }
-        //全部执行将status设置为200则设置重要信息
+        // Execute all. Set status to 200 to set important information
         $this->endJson(
             empty($tmpSql)?200:400,
             $msg,[
@@ -349,41 +350,41 @@ class Install
                 'sql' => $tmpSql,
         ],
             [
-                //设置起点
+                // Set start point
                 "num"  => $i,
             ]
         );
     }
     /**
-     * 检查管理员等信息   第四步
-     * 返回需要信息      第五步
+     * Check administrator and other information. Step 4
+     * Return required information. Step 5
      * @throws \think\db\exception\DataNotFoundException
      * @throws \think\db\exception\DbException
      * @throws \think\db\exception\ModelNotFoundException
      */
     public function complete()
     {
-        //配置时间变量
+        // Configure time variables
         $date = date("Y-m-d");
-        //缓存配置
+        // Cache configuration
         $session = Session::get('install_site_config');
-        //数据库配置
+        // Database configuration
         $config = Db::name('config')->where('1=1')->order('id desc')->find();
         $admin_config = Db::name('user')->where('1=1')->order('id desc')->find();
-        //定义数据库配置
+        // Define database configuration
         $data = [
             'sitename' => $session['sitename'],
             'siteurl' => $session['domain'],
             'support' => $session['manager_email'],
         ];
-        //定义管理员信息
+        // Define administrator information
         $admin_data = [
             'username' => $session['manager'],
             'password' => MD5($session['manager_pwd']),
             'mail' => $session['manager_email'],
             'regdate' => $date,
         ];
-        //修改数据库配置
+        // Modify database configuration
         if (!empty($config)) {
             Db::name('config')
                 ->where('id', '=', $config['id'])
@@ -391,7 +392,7 @@ class Install
         } else {
             Db::name('config')->insert($data);
         }
-        //修改管理员配置
+        // Modify administrator configuration
         if (!empty($admin_config)) {
             Db::name('user')
                 ->where('id', '=', $config['id'])
@@ -399,10 +400,10 @@ class Install
         } else {
             Db::name('user')->insert($admin_data);
         }
-        //创建安装锁
+        // Create installation lock
         file_put_contents(self::$installLock, '安装锁');
         $this->endJson(200, 'Installed success', [
-            //安装完成
+            // Installation is complete
             'admin_url' => '/admin/',
             'admin_name' => $session['manager'],
             'admin_pass' => $session['manager_pwd'],
