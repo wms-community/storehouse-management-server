@@ -15,22 +15,23 @@ return [
     |
     */
     'default_lang'    => env('lang.default_lang', 'zh-cn'),
-    // 允许的语言列表
+    
+    // List of allowed languages
     'allow_lang_list' => ['zh-cn', 'en-us'],
-    // 多语言自动侦测变量名
+    // Multilingual automatic detection of variable names
     'detect_var'      => 'lang',
-    // 是否使用Cookie记录
+    // Whether to use cookie record
     'use_cookie'      => true,
-    // 多语言cookie变量
+    // Multilingual cookie variable
     'cookie_var'      => 'think_lang',
-    // 多语言header变量
+    // Multilingual header variable
     'header_var'      => 'think-lang',
-    // 扩展语言包
+    // Extended language pack
     'extend_list'     => [],
-    // Accept-Language转义为对应语言包名称
+    // Escape Accept-Language to the corresponding language pack name
     'accept_language' => [
         'zh-hans-cn' => 'zh-cn',
     ],
-    // 是否支持语言分组
+    // Is language grouping supported
     'allow_group'     => true,
 ];
