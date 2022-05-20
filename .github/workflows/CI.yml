@@ -30,8 +30,6 @@ jobs:
     - name: Install dependencies
       run: |
         composer install
-    - name: Check coding style
-      run: ./vendor/bin/php-cs-fixer fix --dry-run --stop-on-violation --diff --format=txt
   php:
     name: PHP ${{ matrix.php }} Tests
     runs-on: ubuntu-latest
@@ -84,11 +82,6 @@ jobs:
       uses: actions/checkout@v2
     - name: Install dependencies
       run: yarn
-    - name: Run checks
-      run: |
-        yarn lint
-        yarn fmt:check
-        yarn type:check
   jest:
     name: Frontend Tests
     runs-on: ubuntu-latest
