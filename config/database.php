@@ -84,7 +84,7 @@ return [
         
         'options' => [
             'cluster' => env('REDIS_CLUSTER', 'redis'),
-            'prefix' => env('REDIS_PREFIX', Str::slug(env('APP_NAME', 'blessing_skin'), '_').'_database_'),
+            'prefix' => env('REDIS_PREFIX', Str::slug(env('APP_NAME', 'storehouse_management'), '_').'_database_'),
         ],
 
         'default' => [
