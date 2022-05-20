@@ -16,13 +16,13 @@ return [
     */
     'default'      => env('log.channel', 'file'),
   
-    // 日志记录级别
+    // Logging level
     'level'        => [],
-    // 日志类型记录的通道 ['error'=>'email',...]
+    // Channel of log type record ['error '= >' email ',...]
     'type_channel' => [],
-    // 关闭全局日志写入
+    // Turn off global log writing
     'close'        => false,
-    // 全局日志处理 支持闭包
+    // Global log processing supports closures
     'processor'    => null,
 
     /*
@@ -34,35 +34,33 @@ return [
     | the box, Laravel uses the Monolog PHP logging library. This gives
     | you a variety of powerful log handlers / formatters to utilize.
     |
-    | Available Drivers: "single", "daily", "slack", "syslog",
-    |                    "errorlog", "monolog",
-    |                    "custom", "stack"
+    | Available Drivers: "file",
     |
     */
     'channels'     => [
         'file' => [
-            // 日志记录方式
+            // Logging method
             'type'           => 'File',
-            // 日志保存目录
+            // Log save directory
             'path'           => '',
-            // 单文件日志写入
-            'single'         => false,
-            // 独立日志级别
+            // Single file log write
+            'single'         => true,
+            // Independent log level
             'apart_level'    => [],
-            // 最大日志文件数量
-            'max_files'      => 0,
-            // 使用JSON格式记录
+            // Maximum number of log files
+            'max_files'      => 3,
+            // Record in JSON format
             'json'           => false,
-            // 日志处理
+            // Log processing
             'processor'      => null,
-            // 关闭通道日志写入
+            // Turn off channel log writing
             'close'          => false,
-            // 日志输出格式化
+            // Log output formatting
             'format'         => '[%s][%s] %s',
-            // 是否实时写入
+            // Whether to write in real time
             'realtime_write' => false,
         ],
-        // 其它日志通道配置
+        // Other log channel configurations
     ],
 
 ];
