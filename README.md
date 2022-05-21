@@ -5,7 +5,7 @@
 
 <p align="center">
 <a href="https://github.com/wms-community/storehouse-management-server/actions"><img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/wms-community/storehouse-management-server/CI?style=flat-square"></a>
-<a href="https://codecov.io/gh/wms-community/storehouse-management-server"><img alt="Codecov" src="https://img.shields.io/codecov/c/github/wms-community/storehouse-management-server?style=flat-square"></a>
+<!-- <a href="https://codecov.io/gh/wms-community/storehouse-management-server"><img alt="Codecov" src="https://img.shields.io/codecov/c/github/wms-community/storehouse-management-server?style=flat-square"></a> -->
 <a href="https://github.com/wms-community/storehouse-management-server/releases"><img alt="GitHub release (latest SemVer including pre-releases)" src="https://img.shields.io/github/v/release/wms-community/storehouse-management-server?include_prereleases&style=flat-square"></a>
 <a href="https://github.com/wms-community/storehouse-management-server/blob/master/LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/wms-community/storehouse-management-server?style=flat-square"></a>
 </p>
