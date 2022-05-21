@@ -10,7 +10,6 @@
         "ext-mbstring": "*",
         "ext-openssl": "*",
         "ext-pdo": "*",
-        "ext-tokenizer": "*",
         "ext-xml": "*",
         "ext-zip": "*",
         "topthink/framework": "^6.0.0",
