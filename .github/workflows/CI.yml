@@ -32,8 +32,8 @@ jobs:
         composer install
     - name: Prepare
       run: |
-        @php think service:discover
-        @php think vendor:publish
+        php think service:discover
+        php think vendor:publish
   php:
     name: PHP ${{ matrix.php }} Tests
     runs-on: ubuntu-latest
