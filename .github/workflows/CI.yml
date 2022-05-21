@@ -79,14 +79,13 @@ jobs:
       run: ./vendor/bin/phpunit
     - name: Run tests with coverage report
       if: matrix.php == '7.3'
-      run: ./vendor/bin/phpunit --coverage-clover coverage.xml
+      run: ./vendor/bin/phpunit --coverage-clover=coverage.xml
     - name: Upload coverage report
       uses: codecov/codecov-action@v1
       if: matrix.php == '7.3' && success()
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
         name: github-actions
-        file: ./coverage.xml
   lint:
     name: Frontend Linting
     runs-on: ubuntu-latest
@@ -104,4 +103,3 @@ jobs:
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
         name: github-actions
-        file: ./coverage.xml
