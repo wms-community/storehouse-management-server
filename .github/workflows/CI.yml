@@ -31,8 +31,8 @@ jobs:
       run: |
         composer install
     - name: Prepare
-        run: |
-          php think
+      run: |
+        php think
   php:
     name: PHP ${{ matrix.php }} Tests
     runs-on: ubuntu-latest
