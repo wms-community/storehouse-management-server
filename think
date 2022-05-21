@@ -1,10 +1,20 @@
 #!/usr/bin/env php
 <?php
+
+// +----------------------------------------------------------------------
+// | Storehouse Management Server
+// +----------------------------------------------------------------------
+// | Copyright (c) 2022 SANYIMOE Inc All. rights reserved.
+// +----------------------------------------------------------------------
+// | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
+// +----------------------------------------------------------------------
+// | Author: MoeCinnamo <abcd2890000456@gmail.com>
+// +----------------------------------------------------------------------
 namespace think;
 
-// 命令行入口文件
-// 加载基础文件
+// Command line entry file
+// Load base file
 require __DIR__ . '/vendor/autoload.php';
 
-// 应用初始化
+// Application initialization
 (new App())->console->run();
