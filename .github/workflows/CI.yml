@@ -85,4 +85,3 @@ jobs:
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
         file: ./codecov.xml
-        name: github-actions
