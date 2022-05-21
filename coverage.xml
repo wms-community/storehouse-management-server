@@ -1,15 +1,17 @@
-<coverage cacheDirectory="/coverage"
+<phpunit>
+          <coverage cacheDirectory="/coverage"
           includeUncoveredFiles="true"
           processUncoveredFiles="true"
           pathCoverage="false"
           ignoreDeprecatedCodeUnits="true"
           disableCodeCoverageIgnore="true">
-          <include>
-                    <directory suffix=".php">app</directory>
-                    <directory suffix=".html">app</directory>
-                    <directory suffix=".php">config</directory>
-                    <directory suffix=".js">public</directory>
-                    <directory suffix=".css">public</directory>
-                    <directory suffix=".php">route</directory>
-          </include>
-</coverage>
+                    <include>
+                              <directory suffix=".php">app</directory>
+                              <directory suffix=".html">app</directory>
+                              <directory suffix=".php">config</directory>
+                              <directory suffix=".js">public</directory>
+                              <directory suffix=".css">public</directory>
+                              <directory suffix=".php">route</directory>
+                    </include>
+          </coverage>
+</phpunit>
