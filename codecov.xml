@@ -6,7 +6,7 @@
 
     <groupId>com.github.wms-community</groupId>
     <artifactId>storehouse-management-server</artifactId>
-    <packaging>pom</packaging>
+    <packaging>package</packaging>
     <version>0.0.1</version>
 
     <licenses>
