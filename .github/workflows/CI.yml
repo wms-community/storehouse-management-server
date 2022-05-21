@@ -74,13 +74,6 @@ jobs:
         restore-keys: ${{ runner.os }}-composer-
     - name: Install Composer dependencies
       run: composer install
-    - name: Upload coverage report
-      uses: codecov/codecov-action@v1
-      if: matrix.php == '7.3' && success()
-      with:
-        token: ${{ secrets.CODECOV_TOKEN }}
-        name: github-actions
-        file: ./coverage.xml
   lint:
     name: Frontend Linting
     runs-on: ubuntu-latest
