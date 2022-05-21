@@ -68,6 +68,7 @@ jobs:
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
         name: github-actions
+        file: ./codecov.xml
   lint:
     name: Frontend Linting
     runs-on: ubuntu-latest
