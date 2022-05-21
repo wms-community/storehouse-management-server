@@ -6,7 +6,6 @@
     "require": {
         "php": ">=7.3",
         "ext-json": "*",
-        "ext-openssl": "*",
         "ext-pdo": "*",
         "ext-xml": "*",
         "ext-zip": "*",
