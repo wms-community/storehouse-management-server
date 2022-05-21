@@ -9,10 +9,10 @@
 // | Author: MoeCinnamo <abcd2890000456@gmail.com>
 // +----------------------------------------------------------------------
 
-// [ 应用入口文件 ]
+// [ Application entry file ]
 namespace think;
 require __DIR__ . '/vendor/autoload.php';
-// 执行HTTP应用并响应
+// Execute HTTP application and respond
 $http = (new App())->http;
 $response = $http->run();
 $response->send();
