@@ -9,7 +9,6 @@
         "ext-openssl": "*",
         "ext-pdo": "*",
         "ext-xml": "*",
-        "ext-zip": "*",
         "topthink/framework": "^6.0.0",
         "topthink/think-orm": "^2.0",
         "topthink/think-view": "^1.0"
