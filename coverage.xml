@@ -13,5 +13,8 @@
                               <directory suffix=".css">public</directory>
                               <directory suffix=".php">route</directory>
                     </include>
+                    <exclude>
+                              <directory suffix=".php">vendor</directory>
+                    </exclude>
           </coverage>
 </phpunit>
