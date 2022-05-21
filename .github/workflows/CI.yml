@@ -76,10 +76,10 @@ jobs:
       run: composer install
     - name: Run tests only
       if: matrix.php != '8.0'
-      run: ./vendor/bin/phpunit
+      run: ./vendor/bin/phpunit UnitTest.php
     - name: Run tests with coverage report
       if: matrix.php == '8.0'
-      run: ./vendor/bin/phpunit --coverage-clover=coverage.xml
+      run: ./vendor/bin/phpunit --coverage-clover=coverage.xml UnitTest.php
     - name: Upload coverage report
       uses: codecov/codecov-action@v1
       if: matrix.php == '7.3' && success()
