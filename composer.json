@@ -15,8 +15,6 @@
         "topthink/think-view": "^1.0"
     },
     "require-dev": {
-        "symfony/css-selector": "^5.0",
-        "symfony/dom-crawler": "^5.0",
         "symfony/var-dumper": "^4.2",
         "topthink/think-trace":"^1.0"
     },
