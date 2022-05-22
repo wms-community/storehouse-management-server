@@ -9,6 +9,7 @@
         "ext-pdo": "*",
         "ext-xml": "*",
         "ext-zip": "*",
+        "nunomaduro/collision": "^5.0",
         "topthink/framework": "^6.0.0",
         "topthink/think-orm": "^2.0",
         "topthink/think-view": "^1.0"
@@ -16,7 +17,7 @@
     "require-dev": {
         "symfony/var-dumper": "^4.2",
         "topthink/think-trace":"^1.0",
-        "phpunit/phpunit":"*"
+        "phpunit/phpunit":"^9.4"
     },
     "autoload": {
         "psr-4": {
