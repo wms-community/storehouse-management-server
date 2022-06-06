@@ -256,6 +256,7 @@ class Install
         $manager_pwd   = input('manager_pwd', '', 'htmlspecialchars');
         $manager_ckpwd = input('manager_ckpwd', '', 'htmlspecialchars');
         $manager_email = input('manager_email', '', 'htmlspecialchars');
+        $pattern = "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/";
         if (empty($sitename))
             $this->endJson(0, 'Please enter a site name');
         if (empty($domain))
@@ -264,8 +265,12 @@ class Install
             $this->endJson(0, 'Please enter the admin account');
         if (empty($manager_pwd))
             $this->endJson(0, 'Please input a password');
+        if (empty($manager_ckpwd))
+            $this->endJson(0, 'Please input two passwords');
         if (empty($manager_email))
             $this->endJson(0, 'Please input a email');
+        if (!preg_match($pattern,$manager_email))
+            $this->endJson(0, 'The email format is not legal');
         if ($manager_pwd !== $manager_ckpwd)
             $this->endJson(0, 'The two passwords are different');
         $siteTmpConfig = [
@@ -410,5 +415,4 @@ class Install
             'admin_pass' => $session['manager_pwd'],
         ]);
     }
-
 }
