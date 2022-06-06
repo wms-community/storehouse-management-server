@@ -23,7 +23,7 @@ return [
         'https://comming.soon/update.json'
     ),
     
-    'name' => env('APP_NAME', 'blessing_skin'),
+    'name' => env('APP_NAME', 'warehouse_manager'),
 
     /*
     |--------------------------------------------------------------------------
